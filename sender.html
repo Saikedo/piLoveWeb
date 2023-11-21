@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<header>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.3/socket.io.js"></script>
+    <link rel="stylesheet" href="styles/senderStyles.css">
+    <link rel="stylesheet" href="styles/modal.css">
+    <script type="text/javascript" src="js/sender.js" defer></script>
+</header>
+
+
+<body>
+    <div id="innerBody">
+
+        <div id="loadingModal" class="modal">
+            <div class="modal-content-parent">
+                <div class="modal-content">
+                    <div id="modalLoading" style="align-items: center;">
+                        <img id="topImage" src="mail.svg" style="margin-top: -100px;"/>
+                        <div class="loader"></div>
+                        <p style="font-weight: 600; font-size: 20px; color:#DB397D;">Message loading ...</p>
+                    </div>
+                    <div id="modalSuccess" style="align-items: center; justify-content: center; display: none;">
+                        <img id="topImage" src="mail.svg" style="margin-top: -150px;"/>
+                        <p style="font-weight: 600; font-size: 20px; color:#DB397D;">Message sent!</p>
+                        <p style="font-weight: 400; font-size: 15px; margin-top: 0; color:#DB397D;">Your message is up on the hardware</p>
+                    </div>
+                    <div id="modalTimeout" style="align-items: center; justify-content: center; display: none;">
+                        <img id="topImage" src="mail.svg" style="margin-top: -150px;"/>
+                        <p style="font-weight: 600; font-size: 20px; color:#DB397D;">Message not sent!</p>
+                        <p style="font-weight: 400; font-size: 15px; margin-top: 0; color:#DB397D;">Timed out when trying to send the message</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="sentModal" class="modal">
+            <div class="modal-content-parent">
+                <div class="modal-content">
+                    <img id="topImage" src="mail.svg" />
+                    <div class="loader"></div>
+                    <p style="font-weight: 600; font-size: 20px; color:#DB397D;">Message loading ...</p>
+                </div>
+            </div>
+        </div>
+
+        <img id="backgroundSvg" class="absoluteSvgs" src="Heart.svg" />
+
+        <img class="absoluteSvgs" id="cloudsSvg" src="clouds.svg" />
+        <img class="absoluteSvgs" id="cloudsRightSvg" src="cloudsRight.svg" />
+
+        <div id="container">
+            <div id="connectionStatusContainer">
+                <h2 style="color: white;">Connection Status: </h2>
+                <div class="connectionStateContainer">
+                    <img id="backgroundSvg" style="width: 20px; margin-right: 11px;" src="connectionHeart.svg" />
+                    <h2 id="connectionStatus" style="color: white;">Unknown</h2>
+                </div>
+            </div>
+
+            <div id="connectionStatusContainer">
+                <h2 style="color: white;">Receiver Connection Status:</h2>
+                <div class="connectionStateContainer">
+                    <img id="backgroundSvg" style="width: 20px; margin-right: 11px;" src="connectionHeart.svg" />
+                    <h2 id="receiverConnectionStatus" style="color: white;">Unknown</h2>
+                </div>
+
+            </div>
+
+            <div id="messageSenderContainer">
+                <input type="text" id="messageBox"  minlength="5" maxlength="100" size="20" placeholder="Enter your message here...">
+                <div id="messageButton" onclick="onSendPressed()" style="cursor: pointer;">
+                    <label style="color: white; font-size: x-large; cursor: pointer;">Send</label>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

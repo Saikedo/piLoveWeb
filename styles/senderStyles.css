@@ -1,0 +1,106 @@
+h1   {color: blue;}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    background-color: #C64C68;
+}
+
+div {
+    display: flex;
+    flex-direction: column;
+}
+
+#connectionStatusContainer {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+#innerBody {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+#senderHeader {
+    color: orange;
+}
+
+#container {
+    z-index: 2;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+#messageSenderContainer {
+    flex-direction: row;
+    display: flex;
+    margin-top: 40px;
+}
+
+#messageBox[type=text] {
+    height: 63px;
+    width: 400px;
+    background-color: rgba(255, 255,255, 0.16);
+    border: 1px solid #7A0637;
+    border-radius: 50px;
+    border-color: #7A0637;
+    border-top-color: #7A0637;
+    border-bottom-color: #7A0637;
+    border-left-color: #7A0637;
+    border-right-color: #7A0637;
+    padding-left: 24px;
+    color: white;
+    font-size: 18px;
+}
+
+#messageBox::placeholder {
+    color: white;
+}
+
+
+#messageButton {
+    height: 63px;
+    width: 164px;
+    background-color: #8C0037;
+    align-items: center;
+    justify-content: center;
+    margin-inline-start: 10px;
+    border-radius: 50px;
+}
+
+.absoluteSvgs {
+    position: absolute;
+    z-index: 1;
+}
+
+#backgroundSvg {
+    height: 90%;
+}
+
+#cloudsSvg {
+    left: 0;
+    bottom: 0;
+}
+
+#cloudsRightSvg {
+    right: 0;
+    bottom: 0;
+}
+
+.connectionStateContainer {
+    background-color: #8C0037;
+    margin-left: 10px;
+    flex-direction: row;
+    border-radius: 11px;
+    padding-left: 22px;
+    padding-right: 20px;
+    height: 40px;
+    align-items: center;
+    justify-content: center;
+}
